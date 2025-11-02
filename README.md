@@ -75,7 +75,7 @@ and the red dashed line is the **Kalman-estimated trajectory**.
 
 The Kalman Filter reduces position error significantly compared to raw measurements.
 
-![Error Plot](figures/kalman_error.png)
+![Error Plot](notebooks/figures)
 
 ---
 
