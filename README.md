@@ -89,28 +89,31 @@ The Kalman Filter reduces position error significantly compared to raw measureme
 *(Values may vary slightly depending on random seed.)*
 
 ---
-
 ## 🧮 Mathematical Model
 
 ### State Vector
-
-[
-\mathbf{x}_k = [x, y, v_x, v_y]^T
-]
+**xₖ = [x, y, vₓ, v_y]ᵀ**
 
 ### System Equations
+**Prediction:**
+> xₖ = F · xₖ₋₁ + wₖ₋₁
 
-[
-\mathbf{x}*k = \mathbf{F}\mathbf{x}*{k-1} + \mathbf{w}_{k-1}, \quad
-\mathbf{z}_k = \mathbf{H}\mathbf{x}_k + \mathbf{v}_k
-]
+**Observation:**
+> zₖ = H · xₖ + vₖ
 
-Where
+Where:
 
-* (\mathbf{F}): state transition (constant velocity)
-* (\mathbf{H}): measurement matrix (position only)
-* (\mathbf{Q}): process noise
-* (\mathbf{R}): measurement noise
+| Symbol | Meaning |
+|:--------|:---------|
+| F | State transition matrix (constant velocity model) |
+| H | Measurement matrix (position only) |
+| Q | Process noise covariance |
+| R | Measurement noise covariance |
+| wₖ | Process noise (Gaussian) |
+| vₖ | Measurement noise (Gaussian) |
+
+These equations describe a **linear Gaussian system** —  
+the foundation of the Kalman Filter, which recursively estimates hidden states from noisy data.
 
 ---
 
