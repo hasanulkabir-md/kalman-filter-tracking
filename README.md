@@ -69,13 +69,13 @@ jupyter notebook notebooks/kalman_filter_tracking.ipynb
 The green line shows **true motion**, gray dots are **noisy measurements**,
 and the red dashed line is the **Kalman-estimated trajectory**.
 
-![Kalman Trajectory](figures/kalman_trajectory.png)
+![Kalman Trajectory](notebooks/figures/kalman_trajectory.png)
 
 ### 🔹 Error Comparison
 
 The Kalman Filter reduces position error significantly compared to raw measurements.
 
-![Error Plot](notebooks/figures)
+![Error Plot](notebooks/figures/kalman_error.png)
 
 ---
 
